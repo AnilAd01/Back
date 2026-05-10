@@ -11,7 +11,10 @@ const app = express();
 
 // Middleware first
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: [
+    "http://localhost:3000",
+    "https://front-delta-mocha.vercel.app"
+  ],
 }));
 app.use(express.json());
 
